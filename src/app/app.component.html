@@ -1,34 +1,59 @@
+<!-- 
+       ,
+       \`-._           __
+        \\  `-..____,.'  `.
+         :`.         /    \`.
+         :  )       :      : \
+          ;'        '   ;  |  :
+          )..      .. .:.`.;  :
+         /::...  .:::...   ` ;
+         ; _ '    __        /:\
+         `:o>   /\o_>      ;:. `.
+        `-`.__ ;   __..--- /:.   \
+        === \_/   ;=====_.':.     ;
+         ,/'`--'...`--....        ;
+              ;                    ;
+            .'                      ;
+          .'                        ;
+        .'     ..     ,      .       ;
+       :       ::..  /      ;::.     |
+      /      `.;::.  |       ;:..    ;
+     :         |:.   :       ;:.    ;
+     :         ::     ;:..   |.    ;
+      :       :;      :::....|     |
+      /\     ,/ \      ;:::::;     ;
+    .:. \:..|    :     ; '.--|     ;
+   ::.  :''  `-.,,;     ;'   ;     ;
+.-'. _.'\      / `;      \,__:      \
+`---'    `----'   ;      /    \,.,,,/
+                   `----`              
+
+ -->
+
 <div class="intersection">
   <app-traffic-light
-    [status]="lightStatus.vertical"
-    position="top"
-    class="top-traffic-light"
+    [status]="lightStatus1"
+    position="horizontal"
+    class="horizontal"
   ></app-traffic-light>
-  <div class="horizontal-lights">
-    <app-traffic-light
-      [status]="lightStatus.horizontal"
-      position="left"
-      class="left-traffic-light"
-    ></app-traffic-light>
-    <app-traffic-light
-      [status]="lightStatus.horizontal"
-      position="right"
-      class="right-traffic-light"
-    ></app-traffic-light>
-  </div>
+
   <app-traffic-light
-    [status]="lightStatus.vertical"
-    position="bottom"
-    class="bottom-traffic-light"
+    [status]="lightStatus2"
+    position="vertical"
+    class="vertical"
+  ></app-traffic-light>
+
+  <app-traffic-light
+    [status]="lightStatus3"
+    position="horizontal"
+    class="horizontal"
+  ></app-traffic-light>
+
+  <app-traffic-light
+    [status]="lightStatus4"
+    position="vertical"
+    class="vertical"
   ></app-traffic-light>
 </div>
-<div class="buttons">
-  <button (click)="triggerEmergency()">Авария</button>
-  <button
-    *ngFor="let button of buttons"
-    [disabled]="button.disabled"
-    (click)="cross(button.position)"
-  >
-    пресичане
-  </button>
-</div>
+
+<button (click)="triggerEmergency()">Авария</button>

@@ -1,27 +1,24 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-traffic-light',
-  templateUrl: './traffic-light.component.html',
-  styleUrl: './traffic-light.component.css',
   standalone: true,
   imports: [CommonModule],
+  templateUrl: './traffic-light.component.html',
+  styleUrls: ['./traffic-light.component.css'],
 })
 export class TrafficLightComponent {
-  @Input() position: string = '';
   @Input() status: string = '';
-  @Output() crossing = new EventEmitter<void>();
-
-  public canCross(): boolean {
-    return this.status !== 'red';
-  }
+  @Input() position: string = '';
 
   public onCross(): void {
     if (this.status === 'yellow') {
       alert('Неправилно пресичане');
     } else {
-      this.crossing.emit();
+      console.log('Crossing');
     }
   }
 }
+
+export default TrafficLightComponent;

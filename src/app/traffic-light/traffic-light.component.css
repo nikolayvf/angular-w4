@@ -1,17 +1,20 @@
 .traffic-light {
   display: flex;
-  flex-direction: column;
-  border: 2px solid red;
+  border: 2px solid black;
   align-items: center;
   justify-content: space-around;
-  height: 5px;
-  width: 5px;
+  background-color: black;
 }
 
-.traffic-light.horizontal {
-  flex-direction: row;
-  height: 20px;
-  width: 5px;
+.horizontal {
+  height: 50px;
+  width: 150px;
+}
+
+.vertical {
+  height: 150px;
+  width: 50px;
+  flex-direction: column;
 }
 
 .traffic-light div {
@@ -19,16 +22,22 @@
   height: 30px;
   margin: 2px;
   border-radius: 50%;
+  border: 1px solid darkgrey;
+  background-color: transparent;
 }
 
 .red {
-  background-color: red;
+  background-color: red !important;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: yellow !important;
 }
 
 .green {
-  background-color: green;
+  background-color: green !important;
+}
+
+.hidden {
+  background-color: darkgrey;
 }

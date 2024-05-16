@@ -1,44 +1,53 @@
-.intersection {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
-  gap: 10px;
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
   align-items: center;
-  justify-items: center;
+  justify-content: space-around;
+  height: 150px;
+  width: 50px;
 }
 
-.horizontal-lights {
-  display: flex;
-  justify-content: space-between;
-  grid-column: 2;
+.horizontal {
+  flex-direction: row;
+  height: 50px;
+  width: 150px;
 }
 
-.top-traffic-light {
-  grid-row: 1;
-  grid-column: 2;
+.vertical {
+  flex-direction: column;
 }
 
-.left-traffic-light {
-  grid-row: 2;
-  grid-column: 1;
+.traffic-light div {
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  border-radius: 50%;
 }
 
-.right-traffic-light {
-  grid-row: 2;
-  grid-column: 3;
+.red {
+  background-color: red;
 }
 
-.bottom-traffic-light {
-  grid-row: 3;
-  grid-column: 2;
+.yellow {
+  background-color: yellow;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+.green {
+  background-color: green;
 }
 
-button {
-  margin: 5px;
-}
+/* 
+
+,_     _
+|\\_,-~/
+/ _  _ |    ,--.
+(  @  @ )   / ,-'
+\  _T_/-._( (
+/         `. \
+|         _  \ |
+\ \ ,  /      |
+ || |-_\__   /
+((_/`(____,- 
+
+*/

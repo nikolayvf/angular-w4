@@ -1,9 +1,16 @@
 <div
   class="traffic-light"
-  [ngClass]="{ horizontal: position === 'left' || position === 'right' }"
+  [ngClass]="{
+    horizontal: position === 'horizontal',
+    vertical: position === 'vertical'
+  }"
 >
-  <div [class.red]="status === 'red'"></div>
-  <div [class.yellow]="status === 'yellow'"></div>
-  <div [class.green]="status === 'green'"></div>
+  <div [ngClass]="{ red: status === 'red', hidden: status !== 'red' }"></div>
+  <div
+    [ngClass]="{ yellow: status === 'yellow', hidden: status !== 'yellow' }"
+  ></div>
+  <div
+    [ngClass]="{ green: status === 'green', hidden: status !== 'green' }"
+  ></div>
 </div>
 <button [disabled]="status === 'red'" (click)="onCross()">пресичане</button>
