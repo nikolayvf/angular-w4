@@ -1,0 +1,9 @@
+<div
+  class="traffic-light"
+  [ngClass]="{ horizontal: position === 'left' || position === 'right' }"
+>
+  <div [class.red]="status === 'red'"></div>
+  <div [class.yellow]="status === 'yellow'"></div>
+  <div [class.green]="status === 'green'"></div>
+</div>
+<button [disabled]="status === 'red'" (click)="onCross()">пресичане</button>
